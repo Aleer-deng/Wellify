@@ -1,0 +1,7 @@
+Django>=5.2.19,<5.3
+djangorestframework>=3.18.3,<3.19
+django-cors-headers>=4.7,<5
+python-dotenv>=1.1,<2
+psycopg[binary]>=3.2,<4
+stellar-sdk>=13,<15
+django-allauth[socialaccount]>=65.21.1,<66

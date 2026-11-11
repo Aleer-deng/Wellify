@@ -1,0 +1,13 @@
+.social-sign-in { margin-top: 24px; }
+.social-buttons { display: grid; gap: 11px; }
+.social-button { display: flex; align-items: center; justify-content: center; gap: 13px; width: 100%; min-height: 46px; padding: 11px 16px; border: 1px solid #d2ddc8; border-radius: 8px; background: #fff; color: #243b2a; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 180ms ease, border-color 180ms ease; }
+.social-button svg { width: 20px; height: 20px; flex-shrink: 0; }
+.social-button:hover:not(:disabled) { background: #f2f7ed; border-color: #547650; }
+.social-button:focus-visible { outline: 3px solid #7a9657; outline-offset: 3px; }
+.social-button:disabled { opacity: .6; cursor: wait; }
+.social-apple { background: #17251b; border-color: #17251b; color: #fff; }
+.social-apple:hover:not(:disabled) { background: #294533; border-color: #294533; }
+.social-message { font-size: 12px; line-height: 1.7; color: #435a39; margin: 14px 0 0; }
+.auth-divider { display: flex; align-items: center; gap: 12px; margin: 25px 0 0; color: #677c57; font-size: 11px; }
+.auth-divider::before, .auth-divider::after { content: ''; height: 1px; flex: 1; background: #e0e7d9; }
+@media (prefers-reduced-motion: reduce) { .social-button { transition: none; } }

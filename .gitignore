@@ -1,0 +1,14 @@
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.p8
+**/*.key
+**/db.sqlite3*
+**/node_modules/
+**/.venv/
+**/.backend-venv/
+**/.security-tools/
+**/.test-state/
+**/__pycache__/
+**/dist/

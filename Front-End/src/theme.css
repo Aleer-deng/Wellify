@@ -1,0 +1,125 @@
+:root {
+  --forest: #1b4332;
+  --forest-deep: #123023;
+  --forest-light: #2d6a4f;
+  --yellow: #f9d949;
+  --yellow-hover: #f0cc25;
+  --yellow-soft: #fff8d6;
+  --green-soft: #eaf2ec;
+  --muted: #536b5c;
+  color: var(--forest);
+  background: #f5f8f5;
+}
+
+h1, h2, h3, .brand { color: var(--forest); }
+button:focus-visible, a:focus-visible, select:focus-visible,
+input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--forest-light);
+  outline-offset: 3px;
+}
+
+/* Forest green anchors the workspace; yellow identifies primary actions. */
+.sidebar { background: var(--forest); border-color: var(--forest-deep); }
+.sidebar .brand { color: #fff; }
+.brand-mark { background: var(--forest); color: var(--yellow); }
+.sidebar .brand-mark { background: var(--yellow); color: var(--forest); }
+.brand-dot { color: var(--forest-light); }
+.sidebar .brand-dot { color: var(--yellow); }
+.workspace-label { color: #c4d9ca; }
+.sidebar .nav-item { color: #e2eee5; }
+.sidebar .nav-item:hover { background: var(--forest-light); }
+.sidebar .nav-item.active { background: var(--yellow); color: var(--forest-deep); }
+.active-dot { background: var(--forest); }
+.sidebar .nav-count { color: #fff; border-color: #6c947c; }
+.sidebar .upgrade { background: var(--forest-deep); border-color: #38614b; }
+.sidebar .upgrade h3 { color: #fff; }
+.sidebar .upgrade p { color: #ccdfd2; }
+.sidebar .upgrade button { background: var(--yellow); color: var(--forest-deep); border-color: var(--yellow); }
+.sidebar .profile { border-color: #3a654e; }
+.sidebar .profile b { color: #fff; }
+.sidebar .profile small, .sidebar .profile button { color: #d3e5d9; }
+.avatar { background: var(--yellow-soft); color: var(--forest); }
+.sidebar .avatar { background: var(--yellow); color: var(--forest); border-color: var(--forest-light); box-shadow: none; }
+.sidebar button:focus-visible, .sidebar a:focus-visible { outline-color: var(--yellow); }
+
+.primary-button, .hero button {
+  background: var(--yellow);
+  color: var(--forest-deep);
+  border-color: var(--yellow);
+  font-weight: 700;
+}
+.primary-button:hover:not(:disabled), .hero button:hover:not(:disabled) { background: var(--yellow-hover); border-color: var(--yellow-hover); }
+.outline-button { color: var(--forest); border-color: #a7bfae; }
+.small-button { background: var(--yellow-soft); border-color: #ead481; color: var(--forest); }
+.text-button, .auth-links .text-button, .notification-row .text-button { color: var(--forest); }
+.tabs button { color: var(--forest); background: var(--green-soft); }
+.tabs button.selected { background: var(--yellow); color: var(--forest-deep); font-weight: 700; }
+
+.hero { background: var(--forest); border-color: var(--forest); }
+.hero h2, .hero p { color: #fff; }
+.hero-badge, .hero-foot { color: #d6e8db; }
+.hero-badge > span { background: var(--yellow); }
+.orbit { border-color: #527b60; }
+.orbit-two { background: var(--forest-light); border-color: #628b6d; }
+.floating-leaf { background: var(--yellow); color: var(--forest); }
+.spark { color: var(--yellow); }
+.float-card { color: var(--forest); }
+.float-icon { background: var(--yellow-soft); color: var(--forest); }
+.welcome { background: #f5f8f5; }
+.welcome-hero h1 span { color: var(--forest-light); }
+.welcome-art { background: var(--forest); border-color: var(--forest); }
+.welcome-art > svg { color: var(--yellow); }
+.welcome-art h2, .welcome-metrics b { color: #fff; }
+.welcome-metrics span { color: #d6e8db; }
+.eyebrow, .page-heading .eyebrow { color: var(--forest-light); }
+.welcome .eyebrow, .wallet-hero .eyebrow { color: var(--forest); }
+
+.wallet-hero { background: linear-gradient(120deg, var(--green-soft), var(--yellow-soft)); }
+.wallet-icon, .modal-symbol, .feature-grid svg, .soft-icon, .challenge-icon.c0 { background: var(--green-soft); color: var(--forest); }
+.balance, .stat-value, .points-total { color: var(--forest); }
+.pill, .tag { background: var(--yellow-soft); color: #655009; }
+.balance-note, .challenge-bottom b, .reward-info b, .history-row b { color: var(--forest-light); }
+.goal-ring { background: conic-gradient(from 220deg, var(--forest-light) var(--progress), #e4ece6 0); }
+.goal-ring svg { color: var(--forest); }
+.bar { background: #bed6c5; }
+.bar.highlighted { background: var(--forest-light); }
+.chart-legend i, .testnet i { background: var(--forest-light); }
+.green { color: var(--forest-light); background: var(--green-soft); }
+.gold { color: #76600e; background: var(--yellow-soft); }
+.testnet { background: var(--green-soft); border-color: #cadcd0; color: var(--forest); }
+.notification i { background: var(--yellow); border-color: var(--forest); }
+.notice, .network-explainer { background: var(--green-soft); border-color: #c4d9ca; color: var(--forest); }
+.notification-row { background: #f1f6f2; }
+.notification-row > svg { color: var(--forest-light); }
+.subscription-card.current { border-color: var(--forest); background: #f1f6f2; }
+.subscription-card li svg { color: var(--forest-light); }
+.form-stack input, .form-stack textarea, .search-label input, .admin-reward input[type=number] { border-color: #b6ccbd; color: var(--forest); }
+.checkbox-label input { accent-color: var(--forest); }
+.config-note { background: var(--yellow-soft); color: #655009; }
+.round-arrow { border-color: #c4d9ca; color: var(--forest); }
+
+/* Keep the top navigation consistent with the forest-green brand. */
+.welcome > header, .main-shell > header {
+  background: var(--forest);
+  border-bottom-color: var(--forest-deep);
+  color: #fff;
+}
+.welcome > header .brand { color: #fff; }
+.welcome > header .brand-mark { background: var(--yellow); color: var(--forest); }
+.welcome > header .auth-links .text-button { color: #fff; }
+.welcome > header .brand-dot { color: var(--yellow); }
+.main-shell > header .breadcrumb { color: #d3e5d9; }
+.main-shell > header .breadcrumb b { color: #fff; }
+.main-shell > header .icon-button { color: #fff; }
+.main-shell > header .testnet { background: var(--forest-deep); color: #fff; border-color: #527b60; }
+.main-shell > header .testnet i { background: var(--yellow); }
+.main-shell > header .avatar { border-color: var(--forest-light); box-shadow: none; }
+.welcome > header button:focus-visible, .welcome > header a:focus-visible,
+.main-shell > header button:focus-visible { outline-color: var(--yellow); }
+
+.welcome > header, .main-shell > header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 4px 18px #12302318;
+}

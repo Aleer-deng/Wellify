@@ -1,0 +1,77 @@
+/* Motion is scoped to the public landing page, using transforms and opacity. */
+.landing { overflow-x: clip; }
+.landing header { animation: wellify-enter .7s both; }
+.landing .brand-mark { animation: wellify-brand-in .9s cubic-bezier(.22,1,.36,1) both; }
+.landing .welcome-hero > div:first-child > * { animation: wellify-enter .8s cubic-bezier(.22,1,.36,1) both; }
+.landing .welcome-hero .eyebrow { animation-delay: .12s; display: inline-flex; align-items: center; gap: 9px; }
+.landing .welcome-hero .eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--forest-light); box-shadow: 0 0 0 5px var(--green-soft); flex-shrink: 0; }
+.landing .welcome-hero h1 { animation-delay: .22s; }
+.landing .welcome-hero h1 > span { display: inline-block; position: relative; isolation: isolate; }
+.landing .welcome-hero h1 > span::after { content: ''; position: absolute; inset: auto -4px 1px; height: 12px; z-index: -1; background: var(--yellow); border-radius: 5px; transform-origin: left; animation: wellify-underline 1s .8s cubic-bezier(.22,1,.36,1) both; }
+.landing .welcome-hero p { animation-delay: .34s; }
+.landing .welcome-hero .auth-links { animation-delay: .44s; }
+.landing .welcome-hero small { animation-delay: .54s; }
+.landing .welcome-art { position: relative; isolation: isolate; animation: wellify-art-in 1s .2s cubic-bezier(.22,1,.36,1) both; box-shadow: 0 22px 55px #1b43321a; }
+.landing .welcome-art h2, .landing .welcome-metrics, .landing .art-habit-note { position: relative; z-index: 1; }
+.landing .art-orbit { position: absolute; border: 1px solid #ffffff20; border-radius: 50%; pointer-events: none; z-index: 0; }
+.landing .orbit-outer { width: 380px; height: 380px; top: -80px; left: calc(50% - 190px); animation: wellify-orbit 28s linear infinite; }
+.landing .orbit-inner { width: 270px; height: 270px; top: -24px; left: calc(50% - 135px); animation: wellify-orbit 22s linear infinite reverse; }
+.landing .art-orbit::after { content: ''; position: absolute; top: 50%; left: -5px; width: 9px; height: 9px; background: var(--yellow); border-radius: 50%; box-shadow: 0 0 18px #f9d94955; }
+.landing .art-emblem { width: 114px; height: 114px; margin: 0 auto 24px; display: grid; place-items: center; background: var(--yellow); color: var(--forest); border-radius: 32px; position: relative; z-index: 1; animation: wellify-float 5s ease-in-out infinite; box-shadow: 0 14px 35px #0d271b55; }
+.landing .art-emblem svg { animation: wellify-step 5s ease-in-out infinite; }
+.landing .wellness-bubble { position: absolute; display: grid; place-items: center; width: 49px; height: 49px; border-radius: 16px; z-index: 2; }
+.landing .bubble-heart { top: 50px; left: 28px; background: #ffffff14; color: var(--yellow); border: 1px solid #ffffff2b; animation: wellify-drift 6s ease-in-out infinite; }
+.landing .bubble-leaf { right: 28px; top: 145px; background: var(--yellow-soft); color: var(--forest); animation: wellify-drift 7s -2s ease-in-out infinite reverse; }
+.landing .art-confetti { position: absolute; color: var(--yellow); pointer-events: none; animation: wellify-twinkle 4s ease-in-out infinite; }
+.landing .confetti-one { right: 48px; top: 35px; font-size: 25px; }
+.landing .confetti-two { top: 175px; left: 42px; font-size: 31px; animation-delay: -1.5s; }
+.landing .confetti-three { right: 28px; bottom: 38px; font-size: 17px; animation-delay: -2.7s; }
+.landing .art-habit-note { display: inline-flex; align-items: center; gap: 9px; background: #ffffff10; border: 1px solid #ffffff26; border-radius: 30px; color: #e3f0e7; padding: 9px 14px; font-size: 10px; margin: 17px 0 0; animation: wellify-enter .8s .9s both; }
+.landing .art-habit-note svg { color: var(--yellow); flex-shrink: 0; }
+.landing .welcome-metrics { margin-top: 27px; }
+.landing .welcome-metrics > span { animation: wellify-enter .7s both; }
+.landing .welcome-metrics > span:nth-child(1) { animation-delay: .8s; }
+.landing .welcome-metrics > span:nth-child(2) { animation-delay: .95s; }
+.landing .welcome-metrics > span:nth-child(3) { animation-delay: 1.1s; }
+.landing .feature-grid > .panel { animation: wellify-enter .8s backwards; transition: transform .25s, border-color .25s, box-shadow .25s; }
+.landing .feature-grid > .panel:nth-child(1) { animation-delay: .55s; }
+.landing .feature-grid > .panel:nth-child(2) { animation-delay: .7s; }
+.landing .feature-grid > .panel:nth-child(3) { animation-delay: .85s; }
+.landing .feature-grid > .panel:hover { transform: translateY(-7px); border-color: #8eaf98; box-shadow: 0 14px 32px #1b433213; }
+.landing .feature-grid > .panel > svg { transition: transform .3s, background .3s; }
+.landing .feature-grid > .panel:hover > svg { transform: rotate(-9deg) scale(1.12); background: var(--yellow); }
+.landing button { transition: background .2s, transform .2s, box-shadow .2s; }
+.landing .primary-button:hover:not(:disabled), .landing .outline-button:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 8px 18px #1b43321a; }
+.landing button:active:not(:disabled) { transform: translateY(0) scale(.98); }
+.landing .primary-button > svg, .landing .outline-button > svg { transition: transform .2s; }
+.landing .primary-button:hover > svg { transform: translateX(4px); }
+.landing footer { animation: wellify-enter .8s 1s both; gap: 18px; flex-wrap: wrap; align-items: center; }
+.landing .motion-toggle { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #b6ccbd; border-radius: 20px; padding: 8px 13px; background: white; color: var(--forest); font-size: 10px; }
+.landing .motion-toggle::before { content: 'Ⅱ'; font-size: 12px; font-weight: 700; }
+.landing.motion-paused .motion-toggle::before { content: '▶'; font-size: 9px; }
+.landing.motion-paused, .landing.motion-paused *, .landing.motion-paused *::before, .landing.motion-paused *::after { animation: none !important; transition: none !important; }
+
+@keyframes wellify-enter { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes wellify-brand-in { from { opacity: 0; transform: rotate(-30deg) scale(.7); } to { opacity: 1; transform: rotate(-5deg) scale(1); } }
+@keyframes wellify-art-in { from { opacity: 0; transform: translateY(25px) rotate(3deg) scale(.97); } to { opacity: 1; transform: translateY(0) rotate(0) scale(1); } }
+@keyframes wellify-underline { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes wellify-float { 0%, 100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-12px) rotate(3deg); } }
+@keyframes wellify-step { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-9deg); } }
+@keyframes wellify-drift { 0%, 100% { transform: translateY(0) rotate(7deg); } 50% { transform: translateY(-14px) rotate(-8deg); } }
+@keyframes wellify-orbit { to { transform: rotate(360deg); } }
+@keyframes wellify-twinkle { 0%, 100% { opacity: .5; transform: rotate(-10deg) scale(.85); } 50% { opacity: 1; transform: rotate(12deg) scale(1.12); } }
+
+@media(max-width:640px) {
+ .landing .art-emblem { width: 92px; height: 92px; border-radius: 25px; margin-bottom: 20px; }
+ .landing .art-emblem svg { width: 52px; height: 52px; }
+ .landing .bubble-heart { left: 18px; top: 35px; }
+ .landing .bubble-leaf { right: 18px; top: 115px; }
+ .landing .wellness-bubble { width: 40px; height: 40px; border-radius: 12px; }
+ .landing .art-habit-note { font-size: 9px; }
+ .landing .welcome-hero h1 > span::after { height: 9px; bottom: 0; }
+ .landing footer { flex-direction: column; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .landing, .landing *, .landing *::before, .landing *::after { animation: none !important; transition: none !important; }
+ .landing .motion-toggle { display: none; }
+}

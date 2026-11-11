@@ -1,0 +1,39 @@
+/* Frame the supplied square image around its centered wordmark. */
+.brand-logo {
+  display: block;
+  position: relative;
+  width: 180px;
+  aspect-ratio: 3.7;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.brand-logo img {
+  position: absolute;
+  width: 121%;
+  max-width: none;
+  height: auto;
+  left: -8.5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Recolor only the lettering while retaining the original transparent edges. */
+.brand-logo img.brand-logo-wordmark {
+  clip-path: inset(0 0 0 33%);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(93%) saturate(1042%) hue-rotate(337deg) brightness(105%) contrast(101%);
+  transition: filter 250ms ease;
+}
+
+.brand-logo:hover img.brand-logo-wordmark {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(31%) saturate(1093%) hue-rotate(112deg) brightness(92%) contrast(99%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo img.brand-logo-wordmark { transition: none; }
+}
+
+@media (max-width: 640px) {
+  .welcome header .brand-logo { width: 128px; }
+}
